@@ -108,7 +108,7 @@ static void MD5_Final(unsigned char *digest, MD5_CTX *ctx)
 #include "memdebug.h"
 
 typedef mbedtls_md5_context MD5_CTX;
-
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 static void MD5_Init(MD5_CTX *ctx)
 {
 #if !defined(HAS_MBEDTLS_RESULT_CODE_BASED_FUNCTIONS)
